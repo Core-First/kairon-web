@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Overview | Kairon</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .arch-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 140px 40px;
+        }
+        pre {
+            background: var(--bg-white);
+            color: var(--primary);
+            padding: 40px;
+            border-radius: 24px;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            line-height: 1.4;
+            margin: 40px 0;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--glass-border);
+        }
+        body.dark-theme pre {
+            background: rgba(0,0,0,0.2);
+            color: var(--primary-light);
+        }
+        h2 {
+            margin: 80px 0 30px;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        h3 {
+            margin: 50px 0 20px;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        .intro {
+            font-size: 1.4rem;
+            color: var(--text-muted);
+            margin-bottom: 60px;
+            max-width: 800px;
+        }
+        .pattern-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow);
+        }
+        .pattern-card h4 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Kairon<span>.</span></a>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+                    <span class="sun">☀️</span>
+                    <span class="moon">🌙</span>
+                </button>
+                <a href="index.html" class="btn btn-secondary nav-btn">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="arch-content">
+        <span class="badge">Technical Deep Dive</span>
+        <h1 style="font-size: 4rem; font-weight: 800; margin-bottom: 20px; line-height: 1.1;">System Architecture</h1>
+        <p class="intro">Kairon is engineered with a strictly decoupled, layered architecture to ensure maintainability, testability, and peak performance on all Android devices.</p>
+
+        <section class="animate-in">
+            <h2>Clean Architecture Layers</h2>
+            <p>The app follows Clean Architecture principles, ensuring that business logic is independent of UI and data sources.</p>
+            <pre>
+┌─────────────────────────────────────────────────────────────┐
+│                    Presentation Layer                       │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │                 UI Components                      │    │
+│  │  • Screens (Home, Weekly, Import, Settings)       │    │
+│  │  • Widgets (Cards, Sheets, Dialogs)               │    │
+│  │  • Theme & Animations                             │    │
+│  └─────────────────────────────────────────────────────┘    │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │              State Management                      │    │
+│  │  • Riverpod Providers                             │    │
+│  │  • Reactive UI Updates                            │    │
+│  │  • State Persistence                               │    │
+│  └─────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────┐
+│                     Domain Layer                           │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │                 Business Logic                      │    │
+│  │  • Entities (ClassEntity, TimetableEntity)        │    │
+│  │  • Use Cases & Services                            │    │
+│  │  • Validation Rules                                │    │
+│  └─────────────────────────────────────────────────────┘    │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │              Repository Interfaces                 │    │
+│  │  • ClassRepository                                 │    │
+│  │  • TimetableRepository                             │    │
+│  │  • AuthRepository                                  │    │
+│  └─────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+┌─────────────────────────────────────────────────────────────┐
+│                      Data Layer                            │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │                 Data Sources                        │    │
+│  │  • SQLite Database (Sqflite)                       │    │
+│  │  • Secure Storage (FlutterSecureStorage)           │    │
+│  │  • File System (PDF/Image processing)              │    │
+│  └─────────────────────────────────────────────────────┘    │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │             Repository Implementations              │    │
+│  │  • SqfliteClassRepository                          │    │
+│  │  • SqfliteTimetableRepository                      │    │
+│  │  • SecureAuthRepository                            │    │
+│  └─────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────┘</pre>
+        </section>
+
+        <section class="animate-in">
+            <h2>Unidirectional Data Flow</h2>
+            <p>Predictable state transitions ensure a smooth user experience and easier debugging.</p>
+            <pre>
+User Interaction → UI Event → Provider Update → Repository Call → Database/Storage → Response → UI Update
+      │                │            │                │                │            │            │
+      ▼                ▼            ▼                ▼                ▼            ▼            ▼
+   Tap Button    → onPressed() → ref.read() → repo.method() → SQL/File Ops → Result → setState()</pre>
+        </section>
+
+        <section class="animate-in">
+            <h2>Design Patterns</h2>
+            
+            <div class="pattern-card">
+                <h4>Repository Pattern</h4>
+                <p>Abstracts data access behind interfaces, allowing for platform-specific implementations and easy mocking for tests.</p>
+            </div>
+
+            <div class="pattern-card">
+                <h4>Provider Pattern (Riverpod)</h4>
+                <p>Handles declarative state management and reactive UI updates with a focus on compile-time safety.</p>
+            </div>
+
+            <div class="pattern-card">
+                <h4>Service Layer</h4>
+                <p>Encapsulates complex business logic and cross-cutting concerns like validation and OCR processing.</p>
+            </div>
+        </section>
+
+        <section class="animate-in">
+            <h2>Security & Privacy</h2>
+            <p>Privacy by design is at the core of Kairon's development.</p>
+            <pre>
+Authentication Flow:
+Biometric/PIN → Secure Storage → Auth State → UI Permissions
+
+Data Protection:
+User Data → AES-256 Encryption → Secure Storage → Platform Keychain
+
+Network Security:
+Offline-First → Local Processing → No External APIs → Privacy by Design</pre>
+        </section>
+
+        <footer class="footer-bottom" style="margin-top: 100px;">
+            <p>&copy; 2026 Kairon. All rights reserved.</p>
+            <div class="footer-links" style="margin-top: 20px;">
+                <a href="https://github.com/Core-First/kairon" style="color: var(--text-muted); text-decoration: none; margin: 0 10px;">GitHub</a>
+                <a href="index.html" style="color: var(--primary); text-decoration: none; font-weight: 600; margin: 0 10px;">Back to Home</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
