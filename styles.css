@@ -765,3 +765,10 @@ footer {
   opacity: 0;
   animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
+
+.playstore-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
