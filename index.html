@@ -1,270 +1,257 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kairon | Smart Timetable Management</title>
-    <meta
-      name="description"
-      content="AI-powered timetable management for students. OCR extraction, smart notifications, and biometric security."
-    />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://core-first.github.io/kairon/" />
-    <meta property="og:title" content="Kairon | Smart Timetable Management" />
-    <meta
-      property="og:description"
-      content="Stop manual entry. Automatically extract your timetable from PDFs and images using AI-powered OCR."
-    />
-    <meta property="og:image" content="images/hero.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kairon | Smart Timetable Management</title>
+  <meta name="description"
+    content="AI-powered timetable management for students. OCR extraction, smart notifications, and biometric security." />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content="https://core-first.github.io/kairon/"
-    />
-    <meta
-      property="twitter:title"
-      content="Kairon | Smart Timetable Management"
-    />
-    <meta
-      property="twitter:description"
-      content="Stop manual entry. Automatically extract your timetable from PDFs and images using AI-powered OCR."
-    />
-    <meta property="twitter:image" content="images/hero.png" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://core-first.github.io/kairon/" />
+  <meta property="og:title" content="Kairon | Smart Timetable Management" />
+  <meta property="og:description"
+    content="Stop manual entry. Automatically extract your timetable from PDFs and images using AI-powered OCR." />
+  <meta property="og:image" content="images/hero.png" />
 
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="images/kairon_icon_512.png" />
-  </head>
-  <body class="light-theme">
-    <nav>
-      <div class="nav-container">
-        <a href="#" class="logo">Kairon<span>.</span></a>
-        <div class="nav-links">
-          <a href="#features">Features</a>
-          <a href="#how-it-works">How it Works</a>
-          <a href="architecture.html">Tech</a>
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://core-first.github.io/kairon/" />
+  <meta property="twitter:title" content="Kairon | Smart Timetable Management" />
+  <meta property="twitter:description"
+    content="Stop manual entry. Automatically extract your timetable from PDFs and images using AI-powered OCR." />
+  <meta property="twitter:image" content="images/hero.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/kairon_icon_512.png" />
+</head>
+
+<body class="light-theme">
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">Kairon<span>.</span></a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="architecture.html">Tech</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+          <span class="sun">☀️</span>
+          <span class="moon">🌙</span>
+        </button>
+        <a href="https://github.com/Core-First/kairon" class="btn btn-secondary nav-btn">GitHub</a>
+        <a href="#download" class="btn btn-primary nav-btn">Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section: Updated for v2.0.0 with AI Assistant announcement -->
+    <!-- The badge and ai-announcement paragraph highlight the new integrated AI functionality -->
+    <section class="hero">
+      <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      <div class="hero-container">
+        <div class="hero-content animate-in">
+          <!-- AI Assistant Feature Highlight: Prominently displayed badge for the new v2.0.0 feature -->
+          <span class="badge">New: AI Assistant Available</span>
+          <h1>Smarter Schedule, <span>Zero</span> Effort.</h1>
+          <!-- AI Assistant use case example: Shows users how to interact with the feature -->
+          <p class="ai-announcement">
+            Kairon now includes integrated AI functionality. Chat with your timetable to ask questions like
+            <em>"what's the next period"</em> and get instant answers about your schedule.
+          </p>
+          <p>
+            Stop manual entry. Automatically extract your timetable from PDFs
+            and images using AI-powered OCR. Stay ahead with intelligent
+            notifications and bank-grade security.
+          </p>
+          <div class="cta-group">
+            <a href="#download" class="btn btn-primary">Get for Android</a>
+            <a href="#features" class="btn btn-secondary">Explore Features</a>
+          </div>
         </div>
-        <div class="nav-actions">
-          <button
-            id="theme-toggle"
-            class="theme-btn"
-            aria-label="Toggle dark mode"
-          >
-            <span class="sun">☀️</span>
-            <span class="moon">🌙</span>
-          </button>
-          <a
-            href="https://github.com/Core-First/kairon"
-            class="btn btn-secondary nav-btn"
-            >GitHub</a
-          >
-          <a href="#download" class="btn btn-primary nav-btn">Download</a>
+        <div class="hero-image animate-in" style="animation-delay: 0.2s">
+          <div class="image-wrapper">
+            <img src="images/hero.png" alt="Kairon App Preview" />
+            <div class="image-overlay"></div>
+          </div>
         </div>
       </div>
-    </nav>
+    </section>
 
-    <main>
-      <section class="hero">
-        <div class="hero-bg-shapes">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
-          <div class="shape shape-3"></div>
-        </div>
-        <div class="hero-container">
-          <div class="hero-content animate-in">
-            <h1>Smarter Schedule, <span>Zero</span> Effort.</h1>
-            <p>
-              Stop manual entry. Automatically extract your timetable from PDFs
-              and images using AI-powered OCR. Stay ahead with intelligent
-              notifications and bank-grade security.
-            </p>
-            <div class="cta-group">
-              <a href="#download" class="btn btn-primary">Get for Android</a>
-              <a href="#features" class="btn btn-secondary">Explore Features</a>
-            </div>
-          </div>
-          <div class="hero-image animate-in" style="animation-delay: 0.2s">
-            <div class="image-wrapper">
-              <img src="images/hero.png" alt="Kairon App Preview" />
-              <div class="image-overlay"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="features" id="features">
-        <div class="section-title animate-in">
-          <h2>Built for Students</h2>
+    <section class="features" id="features">
+      <div class="section-title animate-in">
+        <h2>Built for Students</h2>
+        <p>
+          Everything you need to manage your academic life, simplified into a
+          powerful mobile experience.
+        </p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card animate-in">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Extraction</h3>
           <p>
-            Everything you need to manage your academic life, simplified into a
-            powerful mobile experience.
+            Stop manual entry. Upload your PDF or take a photo, and our AI
+            will parse your classes instantly.
           </p>
         </div>
-        <div class="features-grid">
-          <div class="feature-card animate-in">
-            <div class="feature-icon">🤖</div>
-            <h3>AI Extraction</h3>
-            <p>
-              Stop manual entry. Upload your PDF or take a photo, and our AI
-              will parse your classes instantly.
-            </p>
-          </div>
-          <div class="feature-card animate-in" style="animation-delay: 0.1s">
-            <div class="feature-icon">🔒</div>
-            <h3>Biometric Security</h3>
-            <p>
-              Your schedule is personal. Protect it with fingerprint or face
-              recognition and secure local storage.
-            </p>
-          </div>
-          <div class="feature-card animate-in" style="animation-delay: 0.2s">
-            <div class="feature-icon">🔔</div>
-            <h3>Smart Alerts</h3>
-            <p>
-              Get notified exactly when you need to be. Context-aware reminders
-              keep you on track all day.
-            </p>
-          </div>
-          <div class="feature-card animate-in" style="animation-delay: 0.3s">
-            <div class="feature-icon">🌐</div>
-            <h3>Offline First</h3>
-            <p>
-              No internet? No problem. Kairon works completely offline, ensuring
-              your data stays private.
-            </p>
-          </div>
-          <div class="feature-card animate-in" style="animation-delay: 0.4s">
-            <div class="feature-icon">⚡</div>
-            <h3>Blazing Fast</h3>
-            <p>
-              Built with Flutter for native performance. Smooth transitions and
-              instant load times.
-            </p>
-          </div>
-          <div class="feature-card animate-in" style="animation-delay: 0.5s">
-            <div class="feature-icon">📱</div>
-            <h3>Beautiful UI</h3>
-            <p>
-              A clean, modern interface that supports Material You and dark mode
-              out of the box.
-            </p>
-          </div>
+        <div class="feature-card animate-in" style="animation-delay: 0.1s">
+          <div class="feature-icon">🔒</div>
+          <h3>Biometric Security</h3>
+          <p>
+            Your schedule is personal. Protect it with fingerprint or face
+            recognition and secure local storage.
+          </p>
         </div>
-      </section>
-
-      <section class="how-it-works" id="how-it-works">
-        <div class="container">
-          <div class="section-title animate-in">
-            <h2>How it Works</h2>
-            <p>Getting your schedule organized has never been easier.</p>
-          </div>
-          <div class="steps-grid">
-            <div class="step animate-in">
-              <div class="step-number">01</div>
-              <h3>Upload or Scan</h3>
-              <p>
-                Import your timetable from a PDF file or snap a photo of your
-                printed schedule.
-              </p>
-            </div>
-            <div class="step animate-in" style="animation-delay: 0.1s">
-              <div class="step-number">02</div>
-              <h3>AI Magic</h3>
-               <p>
-                 Kairon extracts your classes, times, and locations automatically
-                 using advanced OCR technology.
-               </p>
-            </div>
-            <div class="step animate-in" style="animation-delay: 0.2s">
-              <div class="step-number">03</div>
-              <h3>Stay Notified</h3>
-              <p>
-                Receive smart reminders before each class and stay on top of
-                your academic day.
-              </p>
-            </div>
-          </div>
+        <div class="feature-card animate-in" style="animation-delay: 0.2s">
+          <div class="feature-icon">🔔</div>
+          <h3>Smart Alerts</h3>
+          <p>
+            Get notified exactly when you need to be. Context-aware reminders
+            keep you on track all day.
+          </p>
         </div>
-      </section>
-
-
-
-      <section class="tech-section">
-        <div class="tech-container">
-          <div class="tech-content animate-in">
-            <h2>Modern Tech Stack</h2>
-            <p>Engineered for stability and privacy.</p>
-            <div class="tech-grid">
-              <div class="tech-pill"><span>🐦</span> Flutter</div>
-              <div class="tech-pill"><span>🌊</span> Riverpod</div>
-              <div class="tech-pill"><span>🗄️</span> SQLite</div>
-              <div class="tech-pill"><span>🧠</span> On-Device ML</div>
-              <div class="tech-pill"><span>🏗️</span> Clean Architecture</div>
-            </div>
-          </div>
+        <!-- AI Assistant Feature: Replaced Offline First feature to highlight the new integrated AI functionality -->
+        <!-- This change reflects the v2.0.0 update where AI Assistant became a core feature -->
+        <div class="feature-card animate-in" style="animation-delay: 0.3s">
+          <div class="feature-icon">💬</div>
+          <h3>AI Assistant</h3>
+          <p>
+            Chat with your timetable using natural language. Ask questions like
+            "what's the next period" and get instant, context-aware answers.
+          </p>
         </div>
-      </section>
-
-      <section class="download-section" id="download">
-        <div class="download-container animate-in">
-          <h2>Ready to transform your schedule?</h2>
-          <p>Download Kairon today and never miss a class again.</p>
-          <div class="download-buttons">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.corefist.kairon"
-              class="btn btn-primary btn-large"
-            >
-              <svg class="playstore-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                <path fill="#FFFFFF" d="M440.65,128.35c-6.6-5.4-15.9-5.4-22.5,0l-96,79.2v230.6c0,10.8-8.7,19.5-19.5,19.5h-153
-                c-10.8,0-19.5-8.7-19.5-19.5v-319.5c0-10.8,8.7-19.5,19.5-19.5h153c10.8,0,19.5,8.7,19.5,19.5V240l96-79.2c8.3-6.8,8.3-18.8,0-25.6
-                L440.65,128.35z"/>
-              </svg>
-              <span>Get for Android</span>
-              <small>Download from Play Store</small>
-            </a>
-            <!-- <a href="https://github.com/Core-First/kairon" class="btn btn-secondary btn-large">
-                        <span>View Source Code</span>
-                        <small>On GitHub</small>
-                    </a> -->
-          </div>
+        <div class="feature-card animate-in" style="animation-delay: 0.4s">
+          <div class="feature-icon">⚡</div>
+          <h3>Blazing Fast</h3>
+          <p>
+            Built with Flutter for native performance. Smooth transitions and
+            instant load times.
+          </p>
         </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-brand">
-          <a href="#" class="logo">Kairon<span>.</span></a>
-          <p>Empowering students with smart schedule management.</p>
+        <div class="feature-card animate-in" style="animation-delay: 0.5s">
+          <div class="feature-icon">📱</div>
+          <h3>Beautiful UI</h3>
+          <p>
+            A clean, modern interface that supports Material You and dark mode
+            out of the box.
+          </p>
         </div>
-        <div class="footer-nav">
-          <div class="footer-col">
-            <h4>Product</h4>
-            <a href="#features">Features</a>
-            <a href="#how-it-works">How it Works</a>
-            <a href="#download">Download</a>
+      </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-title animate-in">
+          <h2>How it Works</h2>
+          <p>Getting your schedule organized has never been easier.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step animate-in">
+            <div class="step-number">01</div>
+            <h3>Upload or Scan</h3>
+            <p>
+              Import your timetable from a PDF file or snap a photo of your
+              printed schedule.
+            </p>
           </div>
-          <div class="footer-col">
-            <h4>Resources</h4>
-            <a href="architecture.html">Architecture</a>
-            <a href="privacy_policy.html">Privacy Policy</a>
-            <a href="https://github.com/Core-First/kairon">Open Source</a>
+          <div class="step animate-in" style="animation-delay: 0.1s">
+            <div class="step-number">02</div>
+            <h3>AI Magic</h3>
+            <p>
+              Kairon extracts your classes, times, and locations automatically
+              using advanced OCR technology.
+            </p>
           </div>
-          <div class="footer-col">
-            <h4>Connect</h4>
-            <a href="https://github.com/Core-First">GitHub</a>
-            <a href="mailto:ronaldgosso@gmail.com">Support</a>
+          <div class="step animate-in" style="animation-delay: 0.2s">
+            <div class="step-number">03</div>
+            <h3>Stay Notified</h3>
+            <p>
+              Receive smart reminders before each class and stay on top of
+              your academic day.
+            </p>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Kairon. Built with ❤️ by Core-First.</p>
-      </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+
+
+    <section class="tech-section">
+      <div class="tech-container">
+        <div class="tech-content animate-in">
+          <h2>Modern Tech Stack</h2>
+          <p>Engineered for stability and privacy.</p>
+          <div class="tech-grid">
+            <div class="tech-pill"><span>🐦</span> Flutter</div>
+            <div class="tech-pill"><span>🌊</span> Riverpod</div>
+            <div class="tech-pill"><span>🗄️</span> SQLite</div>
+            <div class="tech-pill"><span>🧠</span> On-Device ML</div>
+            <div class="tech-pill"><span>🏗️</span> Clean Architecture</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section: Updated for v2.0.0 with official Google Play Store badge -->
+    <!-- Replaced custom button with official Play Store badge for better brand recognition -->
+    <section class="download-section" id="download">
+      <div class="download-container animate-in">
+        <h2>Ready to transform your schedule?</h2>
+        <!-- Version 2.0.0 reference: Updated to reflect the new AI Assistant feature release -->
+        <p>Download Kairon v2.0.0 today and never miss a class again.</p>
+        <div class="download-buttons">
+          <!-- Official Google Play Store badge: Direct link to app's Play Store listing -->
+          <a href="https://play.google.com/store/apps/details?id=com.corefist.kairon" class="playstore-badge"
+            target="_blank" rel="noopener noreferrer">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              alt="Get it on Google Play" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">Kairon<span>.</span></a>
+        <p>Empowering students with smart schedule management.</p>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it Works</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="architecture.html">Architecture</a>
+          <a href="privacy_policy.html">Privacy Policy</a>
+          <a href="https://github.com/Core-First/kairon">Open Source</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://github.com/Core-First">GitHub</a>
+          <a href="mailto:ronaldgosso@gmail.com">Support</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kairon. Built with ❤️ by Core-First.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
